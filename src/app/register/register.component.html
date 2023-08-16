@@ -1,0 +1,89 @@
+<h1 class="text-center py-4"><u>Registration Form</u></h1>
+<div class="container">
+    <div class="row">
+        <form action="">
+            <!-- FULLNAME section starts -->
+            <div class="form-group mb-3">
+                <input type="text" placeholder="Full Name" class="form-control">
+            </div>
+            <!-- FULLNAME section ends -->
+
+            <!-- ADDRESS section starts -->
+            <div class="row form-group mb-3">
+                <div class="col-md-4">
+                    <input type="text" placeholder="Apartment/Flat no." class="form-control">
+                </div>
+                <div class="col-md-8">
+                    <input type="text" placeholder="Street" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <div class="col-md-6">
+                    <select class="form-control mb-2">
+                        <option value="">City..</option>
+                        <option *ngFor="let city of City">{{city}}</option>
+                    </select>
+                </div>
+                <div class="col-md-4">
+                    <input type="text" placeholder="State" class="form-control">
+                </div>
+                <div class="col-md-2">
+                    <input type="text" placeholder="PIN Code" class="form-control">
+                </div>
+            </div>
+            <!-- ADDRESS section ends -->
+
+            <!-- PHONENo. section starts -->
+            <div class="form-group mb-3">
+                <input type="text" placeholder="Phone No." class="form-control">
+            </div>
+            <!-- PHONENo. section ends -->
+
+            <!-- Email section starts -->
+            <div class="form-group mb-3">
+                <input type="text" placeholder="Email" class="form-control">
+            </div>
+            <!-- Email section ends -->
+
+            <!-- PASSWORD section starts -->
+            <div class="row form-group mb-3">
+                <div class="col-md-6">
+                    <input type="text" placeholder="Password" class="form-control">
+                </div>
+                <div class="col-md-6">
+                    <input type="text" placeholder="Confirm-Password" class="form-control">
+                </div>
+            </div>
+            <!-- PASSWORD section ends -->
+
+            <!-- COURSE-DETAILS section starts -->
+            <div class="form-group row mb-3">
+                <div class="col-md-6">
+                    <select class="form-control mb-2 dropdown" formControlName="course">
+                        <option value="">Course</option>
+                        <option *ngFor="let course of Courses">{{course}}</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control mb-2" placeholder="Institute Name">
+                </div>
+            </div>
+            <div class="form-group row mb-3">
+                <div class="col-md-6">
+                    <input type="text" class="form-control mb-2" placeholder="Specialization">
+                </div>
+                <div class="col-md-4">
+                    <select class="form-control mb-2 dropdown" formControlName="passOn">
+                        <option value="">Pass Year</option>
+                        <option *ngFor="let passon of PassYear">{{passon}}</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <input type="text" class="form-control mb-2" placeholder="CGPA">
+                </div>
+            </div>
+            <!-- COURSE-DETAILS section ends -->
+            <button class="btn btn-success">Submit</button>
+        </form>
+    </div>
+</div>

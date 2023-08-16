@@ -1,0 +1,58 @@
+// TEXT-ON-IMAGE section starts //
+.imageText{
+    position: relative;
+}
+
+.text_image{
+    position: relative;
+    z-index: 1;
+}
+.texts{
+    position: absolute;
+    z-index: 2; 
+    left: 124px;
+    top: 19px;
+    color: crimson;
+    background: rgba(43, 57, 64, .7);
+    border-radius: 15px;
+    padding: 10px;
+}
+@media screen and (max-width: 1200px){
+    .texts{
+        position: absolute;
+        left: 34px;
+        top: 19px;
+    }
+}
+@media screen and (max-width: 992px){
+    .texts{
+        position: absolute;
+        left: 20px;
+        top: 19px;
+    }
+}
+@media screen and (max-width: 768px){
+    .texts{
+        position: absolute;
+        left: 30px;
+        top: 19px;
+        right: 30px;
+    }
+}
+// TEXT-ON-IMAGE section ends //
+
+// CONTACT-FORM section starts //
+input.ng-invalid.ng-touched{
+    border-color: red;
+}
+.errMsg{
+    color: red;
+}
+textarea.ng-invalid.ng-touched{
+    border-color: red;
+}
+
+.result{
+    color: green;
+}
+// CONTACT-FORM section ends //

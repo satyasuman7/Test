@@ -1,0 +1,96 @@
+<!-- Carousel section starts -->
+<div class="container carousel pb-4">
+    <div class="row">
+        <ngb-carousel >
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img src="../../assets/images/beautiful-tan-modern-furniture-1p8lqahjzvgac2vw.jpg" alt="Random first slide" width="100%" height="580" />
+                </div>
+                <div class="carousel-caption">
+                    <h1>INTERIOR DESIGN</h1>
+                    <p>We present our Modern Furniture.</p>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img src="../../assets/images/fewf.jpg" alt="Random second slide" width="100%" height="580"/>
+                </div>
+                <div class="carousel-caption">
+                    <h1>LIVING ROOM</h1>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </ng-template>
+            <ng-template ngbSlide>
+                <div class="picsum-img-wrapper">
+                    <img src="../../assets/images/interior-living-room-wall-mock-up-backgroun.jpg" alt="Random third slide" width="100%" height="580"/>
+                </div>
+                <div class="carousel-caption">
+                    <h1 class="text-dark">MODERN SOFA SET</h1>
+                    <p class="text-dark">Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+            </ng-template>
+        </ngb-carousel>
+    </div>
+</div>
+<!-- Carousel section ends -->
+
+<!-- TEXT-ON-IMAGE section starts -->
+<div class="container imageText pb-4">
+    <img src="../../assets/images/maxresdefault.jpg" alt="text on image" width="100%" height="500px" class="text_image">
+    <div class="texts">
+        <h1 class="text-center"><b>Corner Sofa Design</b></h1>
+        <p><b>Modern sofa set interior design ideas and corner sofa set design. modern u shaped sofa design ideas for home with wooden sofa set design.</b></p>
+    </div>
+</div>
+<!-- TEXT-ON-IMAGE section ends -->
+
+<!-- CONTACT FORM section starts -->
+<div class="container contact-form pb-4">
+    <div class="row">
+        <h3>Contact Form</h3>
+        <div class="col-md-6">
+            <form (ngSubmit)="Register(regForm)" [formGroup]="regForm" >
+                <div class="form-group">
+                    <input type="text" class="form-control" formControlName="name" placeholder="Name..." name="name">
+                    <div class="mt-2" *ngIf="f['name'].touched && f['name'].invalid">
+                        <div *ngIf="f['name'].errors && f['name'].errors['required']" class="alert alert-danger">
+                           Name is required.
+                        </div>
+                    </div>
+                  </div><br>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="email" placeholder="Email..." name="email">
+                  <div class="mt-2" *ngIf="f['email'].touched && f['email'].invalid">
+                    <div *ngIf="f['email'].errors && f['email'].errors['required']" class="alert alert-danger">
+                       Email is required.
+                    </div>
+                  </div>
+                </div><br>
+                <div class="form-group">
+                  <input type="text" class="form-control" formControlName="sub" placeholder="Subject..." name="subject" >
+                  <div class="mt-2" *ngIf="f['sub'].touched && f['sub'].invalid">
+                    <div *ngIf="f['sub'].errors && f['sub'].errors['required']" class="alert alert-danger">
+                       Subject is required.
+                    </div>
+                  </div>
+                </div><br>
+                <div class="form-group">
+                    <textarea type="text" class="form-control" formControlName="mesg" rows="4" cols="50" placeholder="Message..." name="Message"></textarea>
+                    <div class="mt-2" *ngIf="f['mesg'].touched && f['mesg'].invalid">
+                        <div *ngIf="f['mesg'].errors && f['mesg'].errors['required']" class="alert alert-danger">
+                           Message is required.
+                        </div>
+                      </div>
+                  </div><br>
+                <button type="submit" class="btn btn-success" [disabled]="!regForm.valid">Login</button>
+              </form>
+        </div>
+        <div class="col-md-6">
+            <h2>Name : <span class="result">{{Name}}</span></h2>
+            <h2>Email : <span class="result">{{email}}</span></h2>
+            <h2>Subject : <span class="result">{{subject}}</span></h2>
+            <h2>Message : <span class="result">{{message}}</span></h2>
+        </div>
+    </div>
+</div>
+<!-- CONTACT FORM section ends -->
